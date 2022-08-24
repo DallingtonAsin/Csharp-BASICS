@@ -129,7 +129,16 @@ public class HelloWorld
         String subject = "C#";
         Console.WriteLine("I scored {0}% in {1}", getMyMarks(subject), subject);
         
-        // Use of goto
+        // Use of goto statement
+        String lang = "English";
+        
+        if(lang == "English"){
+            goto EnglishMan;
+        }
+        
+        EnglishMan: 
+          Console.WriteLine("I am an english man");
+        
         
         
     }

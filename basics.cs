@@ -27,7 +27,22 @@ public class HelloWorld
         float unboxed = (float)boxed_f;
         Console.WriteLine("Unboxed double value of f is "+unboxed+"");
         
+        // if statement
+        int age = 17;
+        if(age < 18){
+             Console.WriteLine("A student whose age is {0} is still young", age);
+        }
         
+        // if-else statement
+        int t = 8;
+        if(t%2 == 0){
+             Console.WriteLine("{0} is an even number", t);
+        }else{
+            Console.WriteLine("{0} is an old number", t);
+        }
+        
+        
+        // Int arrays
         int[] nums = {1,2,3,4};
         int total = 0;
         for(int x=0; x<nums.Count(); x++){
@@ -35,6 +50,7 @@ public class HelloWorld
         }
         Console.WriteLine("\nSum of items in an array is "+total);
         
+        // String array
         String[] names = new String[]{"Dallington", "John", "Peter"};
         foreach(String name in names){
             Console.WriteLine("{0} is part of our class", name);

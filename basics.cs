@@ -6,6 +6,14 @@ using System.Linq;
 
 public class HelloWorld
 {
+    
+    static int getMyMarks(String subject){
+        if(subject == "C#"){
+            return 80;
+        }
+        return 45;
+    }
+    
     public static void Main(string[] args)
     {
         // Implicity Casting
@@ -106,5 +114,23 @@ public class HelloWorld
         foreach(String name in names){
             Console.WriteLine("{0} is part of our class", name);
         }
+        
+        // use of break statement;
+        int u = 1;
+        while(u<20){
+            Console.WriteLine("Number to be printed is {0}", u);
+            if(u==12){
+                break;
+            }
+            u++;
+        }
+        
+        // use of return statetement
+        String subject = "C#";
+        Console.WriteLine("I scored {0}% in {1}", getMyMarks(subject), subject);
+        
+        // Use of goto
+        
+        
     }
 }

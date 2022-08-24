@@ -53,6 +53,20 @@ public class HelloWorld
             }
         }
         
+        // use of switch statement
+        int number = 5;
+        switch(number%2){
+            case 0:
+            Console.WriteLine("The number {0} is even", number);
+            break;
+            case 1:
+            Console.WriteLine("The number {0} is odd", number);
+            break;
+            default:
+            Console.WriteLine("The number {0} is neither even nor odd", number);
+            break;
+        }
+        
         
         // Int arrays
         int[] nums = {1,2,3,4};

@@ -125,6 +125,14 @@ public class HelloWorld
             u++;
         }
         
+        // use of continue statement
+        for(int k=50; k>=30; k--){
+            if(k==47){
+                continue;
+            }
+            Console.WriteLine("Printed number is {0}", k);
+        }
+        
         // use of return statetement
         String subject = "C#";
         Console.WriteLine("I scored {0}% in {1}", getMyMarks(subject), subject);

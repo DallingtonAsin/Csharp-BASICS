@@ -28,7 +28,7 @@ public class HelloWorld
         Console.WriteLine("Unboxed double value of f is "+unboxed+"");
         
         // if statement
-        int age = 17;
+        int age = 2;
         if(age < 18){
              Console.WriteLine("A student whose age is {0} is still young", age);
         }
@@ -39,6 +39,18 @@ public class HelloWorld
              Console.WriteLine("{0} is an even number", t);
         }else{
             Console.WriteLine("{0} is an old number", t);
+        }
+        
+        // Nested ifs
+        if(age < 18){
+            Console.WriteLine("A student whose age is {0} is still young", age);
+            if(age < 10){
+                if(age < 3){
+                    Console.WriteLine("A person who is {0} years old should be on breast milk", age);
+                }else{
+                   Console.WriteLine("A student of age {0} should be in a primary school", age); 
+                }
+            }
         }
         
         

@@ -68,15 +68,40 @@ public class HelloWorld
         }
         
         
-        // Int arrays
+        // Int arrays and use of for loop
         int[] nums = {1,2,3,4};
         int total = 0;
+        
+        // for loop construct
         for(int x=0; x<nums.Count(); x++){
             total += nums[x];
         }
         Console.WriteLine("\nSum of items in an array is "+total);
         
-        // String array
+        // while construct that gets sum of odd numbers from 0 to 20;
+        int p = 0;
+        int sum_of_odds = 0;
+        while(p<=20){
+            if(p%2==1){
+                sum_of_odds+=p;
+            }
+            p++;
+        }
+        Console.WriteLine("Sum of odd numbers from 0 to 20 is "+sum_of_odds);
+        
+        
+        // do while construct:  gets sum of even numbers from 10 to 20
+        int sum_of_evens = 0;
+        int num = 10;
+          do{
+              if(num%2==0){
+                  sum_of_evens += num;
+              }
+              num++;
+          }while(num<=20);
+         Console.WriteLine("\nSum of even numbers from 10 to 20 is "+sum_of_evens);
+        
+        // String array and use of foreach
         String[] names = new String[]{"Dallington", "John", "Peter"};
         foreach(String name in names){
             Console.WriteLine("{0} is part of our class", name);

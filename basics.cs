@@ -126,7 +126,7 @@ public class HelloWorld
         }
         
         // use of continue statement
-        for(int k=50; k>=30; k--){
+        for(int k=40; k>=30; k--){
             if(k==47){
                 continue;
             }
@@ -146,7 +146,28 @@ public class HelloWorld
         
         EnglishMan: 
           Console.WriteLine("I am an english man");
+          
+     // Integer arrays
+     int[] mynums = new int[4];
+     Console.WriteLine("Enter your array elements");
+     for(int x=0; x<mynums.Count(); x++){
+         mynums[x] = Convert.ToInt32(Console.ReadLine());
+     }
+     Console.WriteLine("My array is [{0}]", string.Join(", ", mynums));
         
+     // String arrays
+     string[] mystudents = new string[3];
+     Console.WriteLine("Enter your student names");
+     for(int x=0; x<mystudents.Count(); x++){
+         mystudents[x] = Convert.ToString(Console.ReadLine());
+     }
+     Console.WriteLine("My students list is [{0}]", string.Join(", ", mystudents));
+     
+     // single dimensional array - stores elements in a single row
+     string[] players = new string[3]{"Salah", "Ronaldo", "Terry"};
+     for(int k=0; k<players.Count(); k++){
+         Console.WriteLine("Player {0} is at position {1} in the list", players[k], k);
+     }
         
         
     }

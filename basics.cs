@@ -165,10 +165,79 @@ public class HelloWorld
      
      // single dimensional array - stores elements in a single row
      string[] players = new string[3]{"Salah", "Ronaldo", "Terry"};
-     for(int k=0; k<players.Count(); k++){
+     for(int k=0; k<players.Length; k++){
          Console.WriteLine("Player {0} is at position {1} in the list", players[k], k);
      }
-        
-        
+     
+       // Rectangular multidimensional array - equal number of rows & columns
+     int[,] rect_matrix = {{11,32,44}, {10,15,66}};
+      Console.WriteLine("Rectangular multidimensional array");
+     for(int i=0; i<rect_matrix.GetLength(0); i++){
+         for(int j=0; j<rect_matrix.GetLength(1); j++){
+             Console.Write(rect_matrix[i, j]+ " ");
+         }
+         Console.WriteLine();
+     }
+     
+     // Jagged multidimensional array - unequal number of rows & columns
+     
+     Console.WriteLine("Jagged multidimensional array\n");
+     string[][] companies = new string[3][];
+     companies[0] = new string[]{"Microsoft", "Apple"};
+     companies[1] = new string[]{"Tesla", "SpaceX", "Boring Company"};
+     companies[2] = new string[]{"MTN","Airtel", "Africell", "Warid"};
+    
+    for(int i=0; i<companies.Length; i++){
+        for(int j=0; j<companies[i].Length; j++){
+            Console.Write(companies[i][j]+ " ");
+        }
+        Console.WriteLine();
     }
+     
+     // Array references
+     string[] classOne = { "Allan", "Chris", "Monica" };
+     string[] classTwo = { "Katie", "Niel", "Mark"};
+      Console.WriteLine("\nStudents in class one [{0}]", string.Join(", ", classOne));
+       Console.WriteLine("Students in class two [{0}]", string.Join(", ", classTwo));
+       
+     classTwo = classOne;
+     Console.WriteLine("Students in class two [{0}] after changing", string.Join(", ", classTwo));
+     
+     classTwo[2] = "Mike";
+       Console.WriteLine("Students in class two [{0}] after changing", string.Join(", ", classOne));
+       
+      // Using Array class
+      
+   // Creating a single dimensional array using Array class
+      Console.WriteLine("\nExample of single dimensional array using Array class");
+      Array myarray = Array.CreateInstance(typeof (string), 3);
+      myarray.SetValue("Dallington", 0);
+      myarray.SetValue("Gerard", 1);
+      myarray.SetValue("Ahmed", 2);
+    
+      for(int i=0; i<myarray.Length; i++){
+        Console.Write(myarray.GetValue(i)+ " ");
+      }
+      
+    // Creating a multidimensional dimensional array using Array class
+      Console.WriteLine("\nExample of multidimensional dimensional array using Array class");
+      Array employees = Array.CreateInstance(typeof (string), 2, 3);
+      employees.SetValue("146", 0, 0);
+      employees.SetValue("147", 0, 1);
+      employees.SetValue("148", 0, 2);
+      employees.SetValue("Peter", 1, 0);
+      employees.SetValue("John", 1, 1);
+      employees.SetValue("Fred", 1, 2);
+    
+      for(int i=0; i<1; i++){
+        for(int j=0; j<3; j++){
+            Console.Write(employees.GetValue(i, j)+ "\t");
+            Console.WriteLine(employees.GetValue(i+1, j));
+        }
+      }
+      
+     Console.Write("\nRank for the array employees is "+employees.Rank);
+  
+    }              
+    
 }
